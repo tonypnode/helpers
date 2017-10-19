@@ -12,3 +12,11 @@ def macaddr_parse(mac_string, chunk=3, delimiter='-', upper=True):
             return dry.upper()
         else:
             return dry
+
+mac_addr_list = {
+            '1234567890af': '1234-5678-90AF',
+            'fFdD.EabC.1290': 'FFDD-EABC-1290',
+            'FDE abc 098.432': 'FDEA-BC09-8432',
+        }
+for k, v in mac_addr_list.items():
+    print(k, v)
