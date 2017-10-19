@@ -2,7 +2,7 @@ import re
 
 
 def macaddr_parse(mac_string, chunk=3, delimiter='-', upper=True):
-    """ Parses any usual MAC address combination per configured params"""
+    """ Parses and validates any usual MAC address format and returns one per configured params"""
     wash = re.sub(r'[^A-Fa-f0-9]+', '', mac_string)
     if len(wash) != 12:
         raise ValueError('Incorrect MAC Address format: Should be 12 Hex chars')
